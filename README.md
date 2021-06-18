@@ -1,3 +1,11 @@
+# Notice
+
+This is just a copy of the latest (as of June, 2021) version (i.e. 1.8.7) of the original code taken from https://github.com/harvesthq/chosen. 
+It is, however, not the original source code in coffee script, but the result of its transcompilation to javascript. 
+
+The code of one function only was changed in order to allow the script to render on mobile devices, too. 
+
+
 # Chosen
 
 Chosen is a library for making long, unwieldy select boxes more user friendly.
