@@ -588,7 +588,26 @@
     };
 
     AbstractChosen.browser_is_supported = function() {
-      return "Microsoft Internet Explorer" === window.navigator.appName ? document.documentMode >= 8 : /iP(od|hone)|Android|Mobile|Windows Phone|BlackBerry|BB10/i.test(window.navigator.userAgent);
+      // This returns almost always true (if IE >= 8)
+      // If you need to check on mobile browsers, however, use the line below instead of the original code: 
+      // let isMobile = /iP(od|hone)|Android|Mobile|Windows Phone|BlackBerry|BB10/i.test(window.navigator.userAgent);
+      
+      return "Microsoft Internet Explorer" === window.navigator.appName ? document.documentMode >= 8 : true; 
+      
+      /* Original Code
+        if (window.navigator.appName === "Microsoft Internet Explorer") {
+          return document.documentMode >= 8;
+        }
+        if (/iP(od|hone)/i.test(window.navigator.userAgent)) {
+          return false;
+        }
+        if (/Android/i.test(window.navigator.userAgent)) {
+          if (/Mobile/i.test(window.navigator.userAgent)) {
+            return false;
+          }
+        }
+        return true;
+     */
     };
 
     AbstractChosen.default_multiple_text = "Select Some Options";
