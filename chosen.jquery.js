@@ -588,7 +588,7 @@
     };
 
     AbstractChosen.browser_is_supported = function() {
-      return "Microsoft Internet Explorer" === window.navigator.appName ? document.documentMode >= 8 : /iP(od|hone)|Andoroid|Mobile|Windows Phone|BlackBerry|BB10/i.test(window.navigator.userAgent);      
+      return "Microsoft Internet Explorer" === window.navigator.appName ? document.documentMode >= 8 : /iP(od|hone)|Android|Mobile|Windows Phone|BlackBerry|BB10/i.test(window.navigator.userAgent);      
     };
 
     AbstractChosen.default_multiple_text = "Select Some Options";
